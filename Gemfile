@@ -2,6 +2,7 @@ source "https://rubygems.org"
 
 gem 'rest-client'
 gem 'activesupport'
+gem 'byebug'
 
 git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
 
