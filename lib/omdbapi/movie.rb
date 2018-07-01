@@ -8,6 +8,9 @@ module Omdbapi
 
       raise InvalidConfiguration.new('omdb.yml file not present') unless File.exists?('config/initializers/omdb.yml')
       omdb_config = YAML::load(File.open('config/initializers/omdb.yml'))
+
+      raise Unauthorized.new('Unauthorized - Provide a valid API key') unless omdb_config['apikey'].present?
+
       @response ||= RestClient.get("#{BASE_URI}/?apikey=#{omdb_config['apikey']}&i=#{imdb_id}")
       JSON.parse(@response.body).with_indifferent_access
     end
