@@ -9,10 +9,10 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Neeraj Kumar"]
   spec.email         = ["neeraj.kumar@gmail.com"]
 
-  spec.summary       = %q{TODO: Write a short summary, because RubyGems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
-  spec.license       = "MIT"
+  spec.summary       = %q{A rubygem to fetch movie information from IMDB.}
+  spec.description   = %q{omdbapi is a rubygem to fetch the movie information, all content and images on the IMDB site which are contributed and maintained by IMDB users.}
+  spec.homepage      = 'https://github.com/neerajkumar/omdbapi'
+  spec.license       = 'MIT'
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
   # to allow pushing to a single host or delete this section to allow pushing to any host.
