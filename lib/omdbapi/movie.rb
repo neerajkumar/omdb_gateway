@@ -6,7 +6,7 @@ module Omdbapi
     def self.find_by_id(imdb_id)
       raise InvalidIMDBID.new('IMDB ID not present') if imdb_id.empty? || imdb_id.nil?
 
-      raise InvalidConfiguration.new('omdb.yml file not present') unless File.exists?('config/omdb.yml')
+      raise InvalidConfiguration.new('omdb.yml file not present') unless File.exists?('config/initializes/omdb.yml')
       omdb_config = YAML::load(File.open('config/initializers/omdb.yml'))
       @response ||= RestClient.get("#{BASE_URI}/?apikey=#{omdb_config['apikey']}&i=#{imdb_id}")
       JSON.parse(@response.body).with_indifferent_access
