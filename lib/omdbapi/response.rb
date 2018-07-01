@@ -33,7 +33,7 @@ module Omdbapi
       omdb_config = YAML::load(File.open('config/initializers/omdb.yml'))
 
       raise Unauthorized.new('Unauthorized - Provide a valid API key') unless omdb_config['apikey'].present?
-      omdb_config[:apikey]
+      omdb_config['apikey']
     end
   end
 end
