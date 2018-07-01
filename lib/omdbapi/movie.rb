@@ -15,4 +15,8 @@ module Omdbapi
       JSON.parse(@response.body).with_indifferent_access
     end
   end
+
+  def self.find_by(params)
+    send("find_by_#{params.key}", params[:value])
+  end
 end
