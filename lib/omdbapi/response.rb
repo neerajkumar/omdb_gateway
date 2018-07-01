@@ -5,13 +5,13 @@ module Omdbapi
 
     attr_reader :api_key, :id, :title, :year, :plot, :return_type
 
-    def initialize(id, title, year=nil, plot=nil, return_type=nil)
+    def initialize(id, title, year=nil, plot=:short, return_type=:json)
       @api_key = api_key
       @id = id
       @title = title
       @year = year
-      @plot = plot
-      @return_type = return_type
+      @plot = plot || :short
+      @return_type = return_type || :json
     end
 
     def fetch
@@ -23,7 +23,11 @@ module Omdbapi
       url += "&plot=#{@plot}" if @plot.present?
       url += "&r=#{@return_type}" if @return_type.present?
       @response ||= RestClient.get(url)
-      JSON.parse(@response.body).with_indifferent_access
+      if @return_type.to_sym == :json
+        return JSON.parse(@response.body).with_indifferent_access
+      else
+        @response.body
+      end
     end
 
     private
