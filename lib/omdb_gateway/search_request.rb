@@ -10,14 +10,7 @@ module OmdbGateway
     end
 
     def fetch
-      @response ||= RestClient.get(url)
-      if @format.present? && @format.to_sym == :json
-        JSON.parse(@response.body)
-      elsif @format.present? && @format.to_sym == :xml
-        @response.body
-      else
-        CollectionResponse.new(JSON.parse(@response.body))
-      end
+      super(CollectionResponse)
     end
 
     private

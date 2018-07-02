@@ -12,6 +12,17 @@ module OmdbGateway
       @api_version = params[:api_version] || 1
     end
 
+    def fetch(response_klass)
+      @response ||= RestClient.get(url)
+      if @format.present? && @format.to_sym == :json
+        JSON.parse(@response.body).with_indifferent_access
+      elsif @format.present? && @format.to_sym == :xml
+        @response.body
+      else
+        response_klass.send(:new, JSON.parse(@response.body))
+      end
+    end
+
     protected
 
     def url
