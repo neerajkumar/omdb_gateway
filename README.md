@@ -50,6 +50,8 @@ Omdbapi::Movie.find_by_title('Raid', 2018, 'full', 'xml')
 Omdbapi::Movie.find_by(id: 'tt7363076', year: 2018, plot: 'full', response_type: 'xml')
 
 Omdbapi::Movie.find_by(id: 'tt7363076', year: 2018, plot: :full, response_type: :xml)
+
+Omdbapi::Movie.find_by(title: 'Raid', year: 2018, plot: :full, response_type: :xml)
     
 => "<?xml version=\"1.0\" encoding=\"UTF-8\"?><root response=\"True\"><movie title=\..."
 ```

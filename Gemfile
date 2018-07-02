@@ -3,6 +3,9 @@ source "https://rubygems.org"
 gem 'rest-client'
 gem 'activesupport'
 gem 'byebug'
+gem 'rspec'
+gem 'vcr'
+gem 'webmock'
 
 git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
 
