@@ -32,29 +32,35 @@ Omdbapi provides different methods to fetch the data from OMDB. For example, ```
 
 ```ruby
 require 'omdbapi'
-    
+
 Omdbapi::Movie.find_by_id('tt7363076')
-   
+
 Omdbapi::Movie.find_by_title('Raid')
-    
+
 Omdbapi::Movie.find_by(id: 'tt7363076')
+
+Omdbapi::Movie.find_by(title: 'Raid')
+
+=> <Omdbapi::Response:0x00007fa51293f6c0 @title="Raid", @year="2018", @rated="NOT ...
     
-=> {"Title"=>"Star Wars: Episode IV - A New Hope", "Year"=>"1977", "Rated"=> ...
+Omdbapi::Movie.find_by_id('tt7363076', format: :json)
+
+Omdbapi::Movie.find_by_title('Raid', format: :json)
+
+Omdbapi::Movie.find_by(id: 'tt7363076', format: :json)
+    
+=> {"Title"=>"Raid", "Year"=>"2018", "Rated"=>"NOT RATED", "Released"=>"16 Mar ...
 ```
     
-Omdbapi takes other parameters too. For example, ```year, plot, response_type```. Default values are plot: 'short', response_type: 'json'.
+Omdbapi takes other parameters too. For example, ```year, plot, format```. Default values are plot: 'short', format: 'json'.
     
 ```ruby
-Omdbapi::Movie.find_by_id('tt7363076', 2018, 'full', 'xml')
+Omdbapi::Movie.find_by_id('tt7363076', year: 2018, plot: :full, format: :xml)
     
-Omdbapi::Movie.find_by_title('Raid', 2018, 'full', 'xml')
+Omdbapi::Movie.find_by_title('Raid', year: 2018, plot: :full, format: :xml)
 
-Omdbapi::Movie.find_by(id: 'tt7363076', year: 2018, plot: 'full', response_type: 'xml')
+Omdbapi::Movie.find_by(id: 'tt7363076', year: 2018, plot: :full, format: :xml)
 
-Omdbapi::Movie.find_by(id: 'tt7363076', year: 2018, plot: :full, response_type: :xml)
-
-Omdbapi::Movie.find_by(title: 'Raid', year: 2018, plot: :full, response_type: :xml)
-    
 => "<?xml version=\"1.0\" encoding=\"UTF-8\"?><root response=\"True\"><movie title=\..."
 ```
 

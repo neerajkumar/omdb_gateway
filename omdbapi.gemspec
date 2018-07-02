@@ -9,8 +9,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Neeraj Kumar"]
   spec.email         = ["neeraj.kumar@gmail.com"]
 
-  spec.summary       = %q{A rubygem to fetch movie information from IMDB.}
-  spec.description   = %q{omdbapi is a rubygem to fetch the movie information, all content and images on the IMDB site which are contributed and maintained by IMDB users.}
+  spec.summary       = %q{A rubygem to fetch movie information from IMDB based on API Key.}
+  spec.description   = %q{omdbapi is a rubygem to fetch the movie information, all content and images on the IMDB site based on API Key which are contributed and maintained by IMDB users.}
   spec.homepage      = 'https://github.com/neerajkumar/omdbapi'
   spec.license       = 'MIT'
 
