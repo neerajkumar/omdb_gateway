@@ -9,8 +9,8 @@ require 'omdbapi/search'
 require 'omdbapi/response'
 require 'omdbapi/collection_response'
 require 'omdbapi/request'
-require 'Omdbapi/search_request'
-require 'Omdbapi/movie_request'
+require 'omdbapi/search_request'
+require 'omdbapi/movie_request'
 
 module Omdbapi
   class InvalidIMDBID < Exception; end
