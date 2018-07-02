@@ -2,7 +2,7 @@ require 'spec_helper'
 
 RSpec.describe Omdbapi::Movie do
 
-  before { allow_any_instance_of(Omdbapi::Request).to receive(:api_key).and_return('abcd1234') }
+  before { allow_any_instance_of(Omdbapi::Request).to receive(:api_key).and_return(api_key) }
 
   describe '#find_by_id' do
     it 'should return a response' do

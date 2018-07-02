@@ -19,7 +19,7 @@ module Omdbapi
         params.merge!({ method_name.gsub('find_by_', '') => args[0] }.symbolize_keys)
       end
 
-      return Request.new(params)
+      return MovieRequest.new(params)
     end
 
   end

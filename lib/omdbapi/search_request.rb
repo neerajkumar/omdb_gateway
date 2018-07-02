@@ -1,23 +1,31 @@
 module Omdbapi
   class SearchRequest < Request
 
-    attr_reader :query, :page
+    attr_reader :keyword, :page
 
     def initialize(params)
-      @query = params[:query]
+      @keyword = params[:keyword]
       @page = params[:page] || 1
       super
     end
 
     def fetch
       @response ||= RestClient.get(url)
-      byebug
+      if @format.present? && @format.to_sym == :json
+        JSON.parse(@response.body)
+      elsif @format.present? && @format.to_sym == :xml
+        @response.body
+      else
+        Omdbapi::CollectionResponse.new(JSON.parse(@response.body))
+      end
     end
 
+    private
+
     def url
-      raise InvalidIMDBParams.new('Query String not present') unless @query.present?
+      raise InvalidIMDBParams.new('Query String not present') unless @keyword.present?
       url_string = super
-      url_string += "&s=#{@query}&page=#{@page}"
+      url_string += "&s=#{@keyword}&page=#{@page}"
       url_string
     end
   end

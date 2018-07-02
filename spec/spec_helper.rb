@@ -7,3 +7,8 @@ VCR.configure do |config|
   config.cassette_library_dir = 'spec/test_data/vcr_cassettes'
   config.hook_into :webmock
 end
+
+def api_key
+  @api_key ||= 'abcd1234'
+end
+

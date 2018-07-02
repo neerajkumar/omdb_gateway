@@ -21,7 +21,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 02 Jul 2018 14:08:16 GMT
+      - Mon, 02 Jul 2018 18:34:45 GMT
       Content-Type:
       - text/xml; charset=utf-8
       Transfer-Encoding:
@@ -29,14 +29,14 @@ http_interactions:
       Connection:
       - keep-alive
       Set-Cookie:
-      - __cfduid=d063d0cd8e70816e94b556827ad83cb6b1530540496; expires=Tue, 02-Jul-19
-        14:08:16 GMT; path=/; domain=.omdbapi.com; HttpOnly
+      - __cfduid=de985651e0ad6cee906233844e02b0bef1530556484; expires=Tue, 02-Jul-19
+        18:34:44 GMT; path=/; domain=.omdbapi.com; HttpOnly
       Cache-Control:
       - public, max-age=86400
       Expires:
-      - Tue, 03 Jul 2018 14:08:16 GMT
+      - Tue, 03 Jul 2018 18:34:45 GMT
       Last-Modified:
-      - Mon, 02 Jul 2018 06:51:16 GMT
+      - Mon, 02 Jul 2018 18:34:45 GMT
       Vary:
       - "*, Accept-Encoding"
       X-Aspnet-Version:
@@ -46,13 +46,13 @@ http_interactions:
       Access-Control-Allow-Origin:
       - "*"
       Cf-Cache-Status:
-      - HIT
+      - MISS
       Expect-Ct:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
       Server:
       - cloudflare
       Cf-Ray:
-      - 4341aef8a8ecaa68-SIN
+      - 4343354b3f92a9c6-SIN
       Content-Encoding:
       - gzip
     body:
@@ -60,5 +60,5 @@ http_interactions:
       string: !binary |-
         H4sIAAAAAAAAAyyQXW/aQBBF/8rVvPSF4ICUClXZRG7oB2ohUoBWzdvEHsMk3l1rdg1xf33lNI8z91xd6VzfvvoWJ7GkMTiaTS8JEqpYazg42u++Xizo9ubaYswwSV0MSRztrBe6ufbxpIKsuRVHD6w1YRA2R/PL2YJgnKV2tLnf4aHcfVkSTFrhND5nH7FmwzvYh6xeHM3mC3gNhIMEE0dllTWGCe5MvUywNPZMqNWkytHGzWf86D0bvvVdZsLZNMsYaJZ0xPbIRwKPcHJUPvOApZwOYYIt98ZPI9G/tDzBqhUOjOWHO+v/TlB6zdgqt4SujdlRiUbYWkkJGqroBZlfEZtGKzEYa52QjwLPYTSJ2Pw/Y8ro4lms6dsxhAb87KuXEM/gJoshRS8xCPyQspjGPrUDauNzwlETOGcJowXkeGZ7n5GT1hIqmRJaDoeeD+Lou4ZaCVXsQ7bB0SrUygR+qznaFCWhi+lN0DHnLn0qCuWpl1r5Qn39NK2iL9TzQVKxLta/rj5v5pt27ffD4+99fvSrqz//VmlgEBnua+wTkl0RWZVe4msUlekf4lvuF5JsGuWSbhCR7VoZke1WmOyekhoYEVbpl5Vc6ZflW+WbFeigFx9mGB8cYWxgoJdVkK6kkJtaklicnA+KZ7DTQC4ISiwBJzwLUDoECYTll6QW2yoZ6RgYmkFEPF1slUpKzI3NjA3MzZQUSioLUm2VwClRSd/ORh+UUu0AL2NhFtYCAAA=
     http_version: 
-  recorded_at: Mon, 02 Jul 2018 14:08:16 GMT
+  recorded_at: Mon, 02 Jul 2018 18:34:45 GMT
 recorded_with: VCR 4.0.0

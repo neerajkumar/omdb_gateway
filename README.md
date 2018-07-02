@@ -64,6 +64,26 @@ Omdbapi::Movie.find_by(id: 'tt7363076', year: 2018, plot: :full, format: :xml)
 => "<?xml version=\"1.0\" encoding=\"UTF-8\"?><root response=\"True\"><movie title=\..."
 ```
 
+Omdbapi also provides search to query. 
+
+```ruby
+Omdbapi::Search.query('Batman')
+
+Omdbapi::Search.query('Batman', page: 2)
+
+Omdbapi::Search.query('Batman', page: 1, year: 2018, plot: :full, api_version: 1)
+
+=> <Omdbapi::CollectionResponse:0x00007feb56f7e0b0 @result=[#<Omdbapi::Response:0x00007feb56f7e038 @title="Batman: The Killing Joke" ...
+
+Omdbapi::Search.query('Batman', page: 1, format: :xml)
+
+=> "<root totalResults=\"338\" response=\"True\"><result title=\"Batman: The Killing ...
+
+Omdbapi::Search.query('Batman', page: 2, format: :json)
+
+=> {"Search"=>[{"Title"=>"Batman: The Killing Joke", "Year"=>"2016", "imdbID"=> ...
+```
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake test` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.

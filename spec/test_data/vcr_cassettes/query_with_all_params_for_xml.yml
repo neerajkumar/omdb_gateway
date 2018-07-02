@@ -1,0 +1,64 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.omdbapi.com/?apikey=abcd1234&page=1&plot=full&r=xml&s=Batman&v=1&y=2018
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.2 (darwin17.4.0 x86_64) ruby/2.5.0p0
+      Host:
+      - www.omdbapi.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 02 Jul 2018 18:35:46 GMT
+      Content-Type:
+      - text/xml; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d7da0021b6e4a0d1d32c2ea893f6997a11530556545; expires=Tue, 02-Jul-19
+        18:35:45 GMT; path=/; domain=.omdbapi.com; HttpOnly
+      Cache-Control:
+      - public, max-age=86400
+      Expires:
+      - Tue, 03 Jul 2018 18:35:46 GMT
+      Last-Modified:
+      - Mon, 02 Jul 2018 18:35:46 GMT
+      Vary:
+      - "*, Accept-Encoding"
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Access-Control-Allow-Origin:
+      - "*"
+      Cf-Cache-Status:
+      - MISS
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 434336cc2abda93c-SIN
+      Content-Encoding:
+      - gzip
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAA6WV3W7aMBiGb8XKwbQdFJJAQuhK1dJARoWNCubHOalc4uXXMYtNS3K0e9gd7komaKdtsKiVevjJ8mc/7/u99kUhhAJKKJpNmdxmSva0rgYKJjcil6yn4WLLtMuL4rAIVKwy1tP6VHGaAxTnCdVAyWjR00zdcDQQ8+Bh5PY0pTptyzCdtgZUuWE9jYvHmGlgI6RiRU+LlNrI82aTNzgLYnpGOa1E3lgL3ow5DZlswiZcWH3ChxGp/IhUofITPyYzXUfLwdN4OYwInitkznfQHHJSBRFy5+UqHZSrdPht7QXsbrUokZuaqFobMLy6atwvjPvZqqXrjWQTas3/U50DT6iIcvBQAo/KLA4jVcto2B27pb+XEd9GKCEl9EZq4gbR5EbXfezzMU4NiKHy3WkEuZ8SPI0n3m16zAhxaKKEVJPr1xlnayEeyjNXCPCB8s1n8BsaRwz0C/rIAM0DoPaVyIJacKvjWLb9TnBUhQbyiEGSkYLu2oI3uo7c9GmMw52PRwolw4wsoUWqkeF7KD4B3xtbkR1M1m80FyzAbLthxQF5zGi4ZYAqsKRFPWnXbhtHY3zS/aDe8wkfr/OYU8UCAG/AjBUxk5/+bv7z+49/+ptdx/6jpDxsqL3+PH9kccZqfbE6hmOZziu+PJtwltOGlNnZS1VnEvRgSXDYhsmdInzeRqWu+9zn4+VtCpNUoSpLCF5EE5zuoDdonSQwmVf7FMIqfXMC93K6tEiZVAAdB/BIQMvptkzLPBLwfcw+JwZ0rw24vFMTb9CG+1fHHKZjHCV+QhT05k8EZxlaDkzf7fNTZrhD7qg9wfDNzDNF45wFwMuolHX+2oZt2ab+yjS+DMs+xNNYMiC+gikLwBch6gOtd+yu7Zw0bu7/h8tfgO+ejSYGAAA=
+    http_version: 
+  recorded_at: Mon, 02 Jul 2018 18:35:46 GMT
+recorded_with: VCR 4.0.0

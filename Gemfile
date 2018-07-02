@@ -2,7 +2,6 @@ source "https://rubygems.org"
 
 gem 'rest-client'
 gem 'activesupport'
-gem 'byebug'
 gem 'rspec'
 gem 'vcr'
 gem 'webmock'
