@@ -1,8 +1,8 @@
 require 'rest-client'
 require 'json'
 require 'yaml'
-require 'active_support/core_ext/hash/indifferent_access'
-require 'active_support/core_ext/object/blank'
+require 'active_support'
+require 'active_support/core_ext'
 require "omdbapi/version"
 require 'omdbapi/movie'
 require 'omdbapi/response'
