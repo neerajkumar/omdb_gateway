@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://www.omdbapi.com/?apikey=3a9438fe&plot=short&r=json&t=Raid&v=1
+    uri: https://www.omdbapi.com/?apikey=abc123&plot=short&r=json&t=Raid&v=1
     body:
       encoding: US-ASCII
       string: ''

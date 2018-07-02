@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://www.omdbapi.com/?apikey=3a9438fe&i=tt7363076&plot=full&r=xml&v=1&y=2018
+    uri: https://www.omdbapi.com/?apikey=abc123&i=tt7363076&plot=full&r=xml&v=1&y=2018
     body:
       encoding: US-ASCII
       string: ''

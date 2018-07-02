@@ -2,6 +2,8 @@ require 'spec_helper'
 
 RSpec.describe Omdbapi::Movie do
 
+  before { allow_any_instance_of(Omdbapi::Response).to receive(:api_key).and_return('abc123') }
+
   describe '#find_by_id' do
     it 'should return a response' do
       VCR.use_cassette('find_by_id') do
