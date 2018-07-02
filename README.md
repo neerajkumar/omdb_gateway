@@ -37,19 +37,20 @@ Omdbapi::Movie.find_by_title('Raid')
     
 Omdbapi::Movie.find_by(id: 'tt7363076')
     
-=> {"Title"=>"Star Wars: Episode IV - A New Hope", "Year"=>"1977", "Rated"=>"PG", "Released"=>"25 May 1977", "Runtime"=>"121 min", "Genre"=>"Action, Adventure, Fantasy", "Director"=>"George Lucas", "Writer"=>"George Lucas", "Actors"=>"Mark Hamill, Harrison Ford, Carrie Fisher, Peter Cushing", "Plot"=>"Luke Skywalker joins forces with a Jedi Knight, a cocky pilot, a Wookiee and two droids to save the galaxy from the Empire's world-destroying battle-station, while also attempting to rescue Princess Leia from the evil Darth Vader.", "Language"=>"English", "Country"=>"USA", "Awards"=>"Won 6 Oscars. Another 50 wins & 28 nominations.", "Poster"=>"https://m.media-amazon.com/images/M/MV5BNzVlY2MwMjktM2E4OS00Y2Y3LWE3ZjctYzhkZGM3YzA1ZWM2XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg", "Ratings"=>[{"Source"=>"Internet Movie Database", "Value"=>"8.6/10"}, {"Source"=>"Rotten Tomatoes", "Value"=>"93%"}, {"Source"=>"Metacritic", "Value"=>"90/100"}], "Metascore"=>"90", "imdbRating"=>"8.6", "imdbVotes"=>"1,057,823", "imdbID"=>"tt0076759", "Type"=>"movie", "DVD"=>"21 Sep 2004", "BoxOffice"=>"N/A", "Production"=>"20th Century Fox", "Website"=>"http://www.starwars.com/episode-iv/", "Response"=>"True"}
+=> {"Title"=>"Star Wars: Episode IV - A New Hope", "Year"=>"1977", "Rated"=> ...
 ```
     
 Omdbapi takes other parameters too. For example, ```year, plot, response_type```.
     
-    Omdbapi::Movie.find_by_id('tt7363076', 2018, 'full', 'xml')
+```ruby
+Omdbapi::Movie.find_by_id('tt7363076', 2018, 'full', 'xml')
     
-    Omdbapi::Movie.find_by_title('Raid', 2018, 'full', 'xml')
+Omdbapi::Movie.find_by_title('Raid', 2018, 'full', 'xml')
 
-    Omdbapi::Movie.find_by(id: 'tt7363076', year: 2018, plot: 'full', response_type: 'xml')
+Omdbapi::Movie.find_by(id: 'tt7363076', year: 2018, plot: 'full', response_type: 'xml')
     
-    => "<?xml version=\"1.0\" encoding=\"UTF-8\"?><root response=\"True\"><movie title=\"Raid\" year=\"2018\" rated=\"NOT RATED\" released=\"16 Mar 2018\" runtime=\"128 min\" genre=\"Action, Crime, Drama\" director=\"Raj Kumar Gupta\" writer=\"Ritesh Shah\" actors=\"Ajay Devgn, Saurabh Shukla, Ileana D'Cruz, Amit Sial\" plot=\"A fearless income tax officer raids the mansion of the most powerful man in Lucknow after someone mysteriously draws his attention towards the evidence.\" language=\"Hindi\" country=\"India\" awards=\"N/A\" poster=\"https://ia.media-imdb.com/images/M/MV5BN2NlMmUyZWUtZmI5Yy00YWM3LTkxYzgtM2ZiOTMwNTc5ZDg0XkEyXkFqcGdeQXVyNjcyNjMzMjQ@._V1_SX300.jpg\" metascore=\"N/A\" imdbRating=\"8.0\" imdbVotes=\"2,016\" imdbID=\"tt7363076\" type=\"movie\"/></root>"
-
+=> "<?xml version=\"1.0\" encoding=\"UTF-8\"?><root response=\"True\"><movie title=\..."
+```
 
 ## Development
 
