@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    omdbapi (0.1.0)
+    omdb_gateway (0.1.0)
 
 GEM
   remote: https://rubygems.org/
@@ -68,7 +68,7 @@ DEPENDENCIES
   activesupport
   bundler (~> 1.16)
   minitest (~> 5.0)
-  omdbapi!
+  omdb_gateway!
   rake (~> 10.0)
   rest-client
   rspec

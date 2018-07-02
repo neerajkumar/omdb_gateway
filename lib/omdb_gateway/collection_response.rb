@@ -1,4 +1,4 @@
-module Omdbapi
+module OmdbGateway
   class CollectionResponse
 
     attr_reader :result, :total_results, :response

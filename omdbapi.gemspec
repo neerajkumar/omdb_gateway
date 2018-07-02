@@ -1,17 +1,17 @@
 
 lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require "omdbapi/version"
+require "omdb_gateway/version"
 
 Gem::Specification.new do |spec|
-  spec.name          = "omdbapi"
-  spec.version       = Omdbapi::VERSION
+  spec.name          = "omdb_gateway"
+  spec.version       = OmdbGateway::VERSION
   spec.authors       = ["Neeraj Kumar"]
   spec.email         = ["neeraj.kumar@gmail.com"]
 
   spec.summary       = %q{A rubygem to fetch movie information from IMDB based on API Key.}
-  spec.description   = %q{omdbapi is a rubygem to fetch the movie information, all content and images on the IMDB site based on API Key which are contributed and maintained by IMDB users.}
-  spec.homepage      = 'https://github.com/neerajkumar/omdbapi'
+  spec.description   = %q{omdb_gateway is a rubygem to fetch the movie information, all content and images on the IMDB site based on API Key which are contributed and maintained by IMDB users.}
+  spec.homepage      = 'https://github.com/neerajkumar/omdb_gateway'
   spec.license       = 'MIT'
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'

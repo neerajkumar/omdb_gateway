@@ -1,4 +1,4 @@
-require 'omdbapi'
+require 'omdb_gateway'
 require 'vcr'
 require 'webmock'
 

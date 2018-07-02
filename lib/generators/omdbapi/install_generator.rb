@@ -1,6 +1,6 @@
 require 'rails/generators'
 
-class Omdbapi::InstallGenerator < Rails::Generators::Base
+class OmdbGateway::InstallGenerator < Rails::Generators::Base
 
   desc "copy omdb.yml file into config directory"
 

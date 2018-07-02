@@ -1,4 +1,4 @@
-module Omdbapi
+module OmdbGateway
   class MovieRequest < Request
 
     attr_reader :id, :title

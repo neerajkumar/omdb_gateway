@@ -1,4 +1,4 @@
-module Omdbapi
+module OmdbGateway
   class Request
 
     BASE_URI = 'https://www.omdbapi.com'.freeze

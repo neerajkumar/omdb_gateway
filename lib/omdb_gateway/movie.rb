@@ -1,4 +1,4 @@
-module Omdbapi
+module OmdbGateway
   class Movie
 
     class << self

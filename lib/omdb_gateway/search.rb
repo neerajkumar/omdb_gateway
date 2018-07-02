@@ -1,4 +1,4 @@
-module Omdbapi
+module OmdbGateway
   class Search
 
     def self.query(*args)

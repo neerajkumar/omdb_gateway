@@ -1,4 +1,4 @@
-module Omdbapi
+module OmdbGateway
   class SearchRequest < Request
 
     attr_reader :keyword, :page
@@ -16,7 +16,7 @@ module Omdbapi
       elsif @format.present? && @format.to_sym == :xml
         @response.body
       else
-        Omdbapi::CollectionResponse.new(JSON.parse(@response.body))
+        CollectionResponse.new(JSON.parse(@response.body))
       end
     end
 

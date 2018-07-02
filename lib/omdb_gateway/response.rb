@@ -1,4 +1,4 @@
-module Omdbapi
+module OmdbGateway
   class Response
 
     def initialize(response_hash)
