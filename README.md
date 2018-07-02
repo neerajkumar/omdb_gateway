@@ -1,5 +1,7 @@
 # Omdbapi
 
+[![Build Status](https://travis-ci.org/neerajkumar/omdbapi.svg?branch=master)](https://travis-ci.org/neerajkumar/omdbapi)
+
 Omdbapi is a rubygem to fetch the movie information, all content and images on the IMDB site (http://www.omdbapi.com) which are contributed and maintained by IMDB users.
 
 ## Installation
