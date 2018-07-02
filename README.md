@@ -40,7 +40,7 @@ Omdbapi::Movie.find_by(id: 'tt7363076')
 => {"Title"=>"Star Wars: Episode IV - A New Hope", "Year"=>"1977", "Rated"=> ...
 ```
     
-Omdbapi takes other parameters too. For example, ```year, plot, response_type```.
+Omdbapi takes other parameters too. For example, ```year, plot, response_type```. Default values are plot: 'short', response_type: 'json'.
     
 ```ruby
 Omdbapi::Movie.find_by_id('tt7363076', 2018, 'full', 'xml')
@@ -48,6 +48,8 @@ Omdbapi::Movie.find_by_id('tt7363076', 2018, 'full', 'xml')
 Omdbapi::Movie.find_by_title('Raid', 2018, 'full', 'xml')
 
 Omdbapi::Movie.find_by(id: 'tt7363076', year: 2018, plot: 'full', response_type: 'xml')
+
+Omdbapi::Movie.find_by(id: 'tt7363076', year: 2018, plot: :full, response_type: :xml)
     
 => "<?xml version=\"1.0\" encoding=\"UTF-8\"?><root response=\"True\"><movie title=\..."
 ```
